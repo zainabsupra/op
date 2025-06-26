@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zainab's Glamour Beauty Bar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #830701;
+      --bg-gradient: linear-gradient(135deg, #fff0f5, #ffe4e1);
+      --glass: rgba(124, 91, 91, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-gradient);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      text-shadow: 2px 2px 10px #000;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    nav {
+      background: var(--primary);
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #523633;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2rem;
+      width: 250px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transform-style: preserve-3d;
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+
+    .card:hover {
+      transform: rotateY(5deg) translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #1d0702;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background: #d3cfd1;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #d2d0d1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #fff;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <div class="content">
+      <h1>Zainab's Glamour Beauty Bar</h1>
+      <p>Enhancing Your Natural Beauty with Elegance</p>
+    </div>
+  </header>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/250x200/?haircut" alt="Haircut">
+        <h3>Hair Styling</h3>
+        <p>Trendy haircuts, blowouts, and color treatments tailored to your style.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/250x200/?makeup" alt="Makeup">
+        <h3>Makeup</h3>
+        <p>Professional makeup for weddings, parties & all your special days.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/250x200/?spa,facial" alt="Facial">
+        <h3>Facials</h3>
+        <p>Rejuvenating facial treatments that leave your skin glowing & fresh.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/250x200/?nail,art" alt="Nails">
+        <h3>Manicure</h3>
+        <p>Beautiful nail art & relaxing manicures for every mood.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/250x200/?bridal,hair" alt="Bridal">
+        <h3>Bridal Looks</h3>
+        <p>Special bridal packages to make your big day unforgettable.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/250x200/?beauty,salon" alt="Salon">
+        <h3>Our Studio</h3>
+        <p>Step into our elegant space designed for your relaxation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Zainab Sajid" required>
+      <input type="email" placeholder="zainabbaig019@gmail.com" required>
+      <textarea rows="5" placeholder="We are pleases to have you here!" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Zainab's Glamour Beauty Bar | All Rights Reserved.
+  </footer>
+
+</body>
+</html>
